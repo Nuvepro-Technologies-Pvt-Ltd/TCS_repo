@@ -8,7 +8,7 @@ from azure.mgmt.compute import ComputeManagementClient
     
 def start_tests(credentials,subscriptionId,args):
     x=args.decode('utf-8')
-    b = base64.b64decode(args).decode() 
+    b = base64.b64decode(args)
     inputs = json.loads(b)
     
     vm_name = inputs["arg1"]
